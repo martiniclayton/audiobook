@@ -12,6 +12,7 @@ let indiceModo = 0;
 let conteudoAtual = "";
 
 
+
 const modos = [
     "Resumo Rápido",
     "Aula Completa"

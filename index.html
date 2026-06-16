@@ -1,60 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste ECMA</title>
+    <title>GPT Estudos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Teste ECMA</h1>
-    <p>Este é um teste para verificar a compatibilidade com a versão mais recente do ECMAScript.</p>
-    <script>
-        // Exemplo de código ECMAScript moderno
-        // Usando let e const para declarar variáveis
-        // const para variáveis que não serão reatribuídas
-        // const é usado quando uma varíavel não irá mudar de valor, enquanto let é usado para variáveis que podem ser reatribuídas.
-        const idade = 30;
-        alert(`A sua idade é ${idade} anos`);
-        // let para variáveis que podem ser reatribuídas
-        let idade2;
-        idade2 = 25;
-        alert(`A sua idade é ${idade2} anos`);
-        // Exemplo de código ECMAScript moderno
-        // ao inves de pegarmos variavel por variavel, podemos usar a desestruturação de objetos para pegar varias variaveis de uma vez
-        const pessoa = {
-            nome: 'Clayton',
-            idade3: 30,
-            profissao: 'Desenvolvedor'
-        }
 
-        // antigamente seria
-        const nome1 = pessoa.nome;
-        const idade1 = pessoa.idade3;
-        const profissao1 = pessoa.profissao;
+    <h1>GPT Estudos</h1>
 
-        // com a desestruturação de objetos, podemos pegar as variaveis de uma vez
+    <div id="tela">
+        <h2 id="titulo"></h2>
+    </div>
 
-        const {nome, idade3, profissao} = pessoa;
+    <div class="botoes">
+        <button onclick="anterior()">⬅ Anterior</button>
+        <button onclick="proximo()">Próximo ➡</button>
+        <button onclick="entrar()">Entrar</button>
+        <button onclick="voltarNivel()">Voltar</button>
 
-        alert(`O nome da pessoa é ${nome}, ela tem ${idade} anos e sua profissão é ${profissao}`)
+        <button onclick="ouvirNovamente()">🔊 Ouvir novamente</button>
 
-        // Exemplo de código ECMAScript moderno
-        const greet = (name) => {
-            console.log(`Olá, ${name}! Bem-vindo ao teste ECMA.`);
-        };
+        <button onclick="pararFala()">⏹ Parar</button>
 
-        greet('Clayton');
+        <button onclick="maisDetalhes()">➕ Mais detalhes</button>
 
-        // juntando listas usando os três pontinhos (spread operator)
-        const frutas = ["Maçã", "Banana"];
-        const doces = ["Chocolate", "Bala"];
+        <button onclick="mudarVelocidade()">
+    ⏩ Velocidade
+</button>
+    </div>
 
-        // Juntando tudo em uma nova lista usando os três pontinhos:
-        const compras = [...frutas, ...doces, "Pão"];
+    <script src="conteudos.js"></script>
+    <script src="materias.js"></script>
+    <script src="app.js"></script>
 
-        console.log(compras); 
-        // Resultado: ["Maçã", "Banana", "Chocolate", "Bala", "Pão"]
-    </script>
-    
 </body>
 </html>

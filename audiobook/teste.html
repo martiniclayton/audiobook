@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Teste Voz</title>
+</head>
+<body>
+
+<button onclick="falar()">Falar</button>
+
+<script>
+function falar() {
+    const msg = new SpeechSynthesisUtterance("Olá, estou falando.");
+    msg.lang = "pt-BR";
+    speechSynthesis.speak(msg);
+}
+</script>
+
+</body>
+</html>

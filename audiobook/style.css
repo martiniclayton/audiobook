@@ -1,0 +1,25 @@
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+}
+
+#tela{
+    margin-top:100px;
+}
+
+#titulo{
+    font-size:32px;
+}
+
+.botoes{
+    margin-top:50px;
+}
+
+button{
+    padding:20px;
+    margin:10px;
+    font-size:20px;
+    border-radius:10px;
+}

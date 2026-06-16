@@ -29,6 +29,8 @@ const velocidades = [
 
 let indiceVelocidade = 1;
 
+
+
 function mudarVelocidade() {
 
     indiceVelocidade++;
@@ -95,6 +97,20 @@ function atualizarTela() {
 }
 }
 
+function salvarEstado() {
+
+    localStorage.setItem(
+        "estado",
+        JSON.stringify({
+            nivel,
+            indiceMateria,
+            indiceTopico,
+            indiceModo
+        })
+    );
+
+}
+
 function gerarConteudo() {
 
     const materia = materias[indiceMateria].nome;
@@ -158,6 +174,7 @@ function proximo() {
             modos[indiceModo]
         );
     }
+    salvarEstado();
 }
 
 function anterior() {
@@ -195,6 +212,7 @@ function anterior() {
         atualizarTela();
         falar(modos[indiceModo]);
     }
+    salvarEstado();
 }
 
 function entrar() {
@@ -230,6 +248,7 @@ function entrar() {
     atualizarTela();
 
     gerarConteudo();
+    salvarEstado();
 }
 
 }
@@ -267,6 +286,7 @@ function voltarNivel() {
             materias[indiceMateria].nome
         );
     }
+    salvarEstado();
 }
 function ouvirNovamente() {
 
@@ -311,6 +331,57 @@ function repetir() {
 function parar() {
     speechSynthesis.cancel();
 }
+function executarAcaoHash() {
+
+    const hash = window.location.hash;
+
+    if (hash === "#proximo") {
+
+        proximo();
+
+    }
+
+    else if (hash === "#anterior") {
+
+        anterior();
+
+    }
+
+    else if (hash === "#entrar") {
+
+        entrar();
+
+    }
+
+    else if (hash === "#voltar") {
+
+        voltarNivel();
+
+    }
+
+    history.replaceState(
+        null,
+        "",
+        window.location.pathname
+    );
+
+}
+
+const estadoSalvo =
+JSON.parse(localStorage.getItem("estado"));
+
+if (estadoSalvo) {
+
+    nivel = estadoSalvo.nivel;
+    indiceMateria = estadoSalvo.indiceMateria;
+    indiceTopico = estadoSalvo.indiceTopico;
+    indiceModo = estadoSalvo.indiceModo;
+
+}
+
+executarAcaoHash();
 
 atualizarTela();
+
+
 

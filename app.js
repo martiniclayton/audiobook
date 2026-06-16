@@ -359,6 +359,12 @@ function executarAcaoHash() {
 
     }
 
+    else if (hash === "#parar") {
+
+        parar();
+
+    }
+
     history.replaceState(
         null,
         "",

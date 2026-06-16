@@ -4,6 +4,14 @@ const conteudos = {
       "Resumo Rápido": `Vetores e matrizes são as formas mais básicas de organizar dados. Um vetor organiza as informações em uma linha única, como uma fileira de gavetas. Já a matriz adiciona dimensões, funcionando como uma tabela cheia de linhas e colunas.`,
       "Aula Completa": `Vetores e matrizes são estruturas fundamentais para o armazenamento de informações na memória do computador. Pense no vetor como uma rua com várias casas numeradas em sequência, onde cada casa guarda um dado do mesmo tipo. As matrizes vão um passo além: elas são vetores de vetores, criando grades bidimensionais, perfeitas para representar tabuleiros, planilhas ou pixels em uma tela. O acesso a essas gavetas é instantâneo, mas o tamanho delas geralmente é fixo.`
     },
+    "Ponteiros": {
+      "Resumo Rápido": `Ponteiros são variáveis especiais que não guardam dados, mas sim endereços de memória. Eles literalmente apontam para onde a informação real está escondida no computador.`,
+      "Aula Completa": `Imagine que você quer encontrar um amigo na cidade. Em vez de ele tentar mover a casa dele até você, ele simplesmente te dá um pedaço de papel com o endereço anotado. O ponteiro é exatamente esse pedaço de papel. Na programação, em vez de o computador copiar dados pesados de um lado para o outro, lotando a memória, nós usamos ponteiros para dizer ao programa onde a informação já está guardada. É uma ferramenta extremamente poderosa e rápida, mas exige cuidado: se você apontar para o endereço errado, o programa trava instantaneamente.`
+    },
+    "Vetores": {
+      "Resumo Rápido": `O vetor é a estrutura de dados mais clássica da programação. Ele organiza elementos do mesmo tipo em uma fila contínua e rígida na memória.`,
+      "Aula Completa": `Pense no vetor como um trem de carga estacionado nos trilhos da memória do computador. Todos os vagões são idênticos e numerados em sequência, começando sempre pelo vagão zero. Se você quiser saber o que tem no vagão cinquenta, não precisa abrir os quarenta e nove anteriores; o computador pula direto para a posição exata usando um cálculo matemático simples. Essa velocidade de acesso é a maior força do vetor. Sua maior fraqueza é a rigidez: assim como um trem de metal, ele tem um tamanho fixo e não consegue criar vagões novos do nada enquanto está rodando.`
+    },
     "Métodos de ordenação": {
       "Resumo Rápido": `Os métodos de ordenação servem para colocar os dados em uma sequência lógica, seja crescente ou decrescente. Dados organizados deixam qualquer pesquisa infinitamente mais rápida.`,
       "Aula Completa": `Imagine tentar encontrar um nome em uma lista telefônica onde as páginas estão totalmente embaralhadas. Seria um pesadelo, não é? Os algoritmos de ordenação existem exatamente para resolver isso. Eles varrem as estruturas de dados e reorganizam os elementos usando diferentes lógicas. Existem métodos mais simples e lentos para listas pequenas, e métodos avançados e velozes para grandes bancos de dados.`
@@ -66,6 +74,14 @@ const conteudos = {
       "Resumo Rápido": `Antes de construir máquinas, precisamos da base matemática. Aqui revisamos conjuntos, relações e funções, que são as ferramentas usadas para descrever como os computadores processam informações.`,
       "Aula Completa": `Pense nos conceitos matemáticos como a caixa de ferramentas antes de construir uma casa. Na teoria da computação, não usamos martelos e pregos, mas sim conjuntos, que são grupos de elementos; relações, que mostram como esses elementos se conectam; e funções, que são como máquinas onde você insere um dado, ela processa, e devolve um resultado. Sem essa base lógica, seria impossível criar as regras que ensinam um computador a ler textos.`
     },
+    "Relações, funções e logica": {
+      "Resumo Rápido": `É a matemática do raciocínio absoluto. A lógica dita as regras do verdadeiro ou falso, enquanto as relações e funções mapeiam como diferentes conjuntos de dados se conectam.`,
+      "Aula Completa": `Antes de ensinar o computador a ler, precisamos ensiná-lo a pensar. A lógica matemática usa os operadores "E", "OU" e "NÃO" para construir os circuitos que tomam decisões baseadas puramente em verdadeiro ou falso. Já as relações e funções funcionam como pontes precisas: elas pegam um elemento de um grupo e aplicam uma regra rigorosa para transformá-lo ou ligá-lo a um elemento de outro grupo. Na teoria da computação, cada passo que um autômato dá é guiado por uma função matemática exata, sem margem para incertezas.`
+    },
+    "Linguagens": {
+      "Resumo Rápido": `Na teoria da computação, uma linguagem é fria e exata. Trata-se de qualquer conjunto de palavras construídas a partir de um alfabeto que obedeça a uma regra matemática específica.`,
+      "Aula Completa": `Esqueça a ideia de linguagem humana, cheia de sentimentos, exceções e gírias. Para a máquina, uma linguagem formal é um conceito fechado. Imagine que o nosso alfabeto tenha apenas as letras A e B. Nós podemos inventar uma linguagem chamada L1, onde a única regra é: "todas as palavras devem começar com A e terminar com B". Pronto. "A B" pertence à linguagem. "A A B" também. Mas "B A" é um erro. O trabalho das máquinas e autômatos que estudamos é justamente pegar qualquer palavra do universo e responder apenas: "Sim, pertence a esta linguagem" ou "Não, foi rejeitada".`
+    },
     "Alfabetos, palavras, linguagens, gramáticas e hierarquia de linguagens": {
       "Resumo Rápido": `É como o aprendizado humano. O alfabeto forma palavras, o conjunto de palavras forma uma linguagem, e a gramática dita as regras. A hierarquia classifica essas linguagens da mais simples à mais complexa.`,
       "Aula Completa": `Para um computador entender algo, precisamos definir as regras do jogo do zero. O alfabeto é apenas uma caixa de símbolos, como o zero e o um. Uma palavra é qualquer combinação desses símbolos. A linguagem é o dicionário completo das palavras válidas. Já a gramática é o guarda de trânsito: ela diz o que é permitido e o que não é. O linguista Noam Chomsky criou uma pirâmide famosa, a Hierarquia de Chomsky, que classifica as linguagens em quatro níveis, desde as que leem textos simples até as que criam sistemas operacionais complexos.`
@@ -112,6 +128,18 @@ const conteudos = {
         "Resumo Rápido": `No contexto dos compiladores, as linguagens formais são as regras matemáticas que garantem que o código escrito por um humano tenha um único sentido, sem ambiguidades para a máquina.`,
         "Aula Completa": `Você já viu como as linguagens formais funcionam na teoria. Aqui na prática, elas são a fundação do compilador. Uma linguagem de programação como C ou Python é, na verdade, uma linguagem formal extremamente complexa. O compilador usa essas regras para ter certeza absoluta do que você quis dizer. Diferente do português, onde uma frase pode ter duplo sentido, no código do computador, a clareza precisa ser cirúrgica, ou o programa inteiro falha.`
       },
+      "Interpretadores, compiladores e modelos híbridos": {
+      "Resumo Rápido": `Compiladores traduzem o programa todo de uma vez. Interpretadores traduzem ao vivo, frase por frase. Modelos híbridos misturam os dois para ganhar velocidade e flexibilidade.`,
+      "Aula Completa": `Imagine que você quer ler um livro em russo. O compilador é aquele tradutor que pega o livro, trabalha semanas nele, e te entrega um livro totalmente em português. Demora para traduzir, mas depois a leitura é super rápida. Já o interpretador é um tradutor simultâneo que senta do seu lado: ele lê uma frase em russo e fala em português na hora. É imediato, mas se você quiser ler o livro de novo amanhã, ele terá que traduzir tudo novamente. Para resolver isso, criamos o modelo híbrido, usado pelo Java: o compilador pega o russo e transforma em um rascunho universal. Depois, um interpretador local pega esse rascunho e o traduz para a máquina instantaneamente, unindo o melhor dos dois mundos.`
+    },
+    "Máquinas de nível e máquinas de multinível": {
+      "Resumo Rápido": `O computador é organizado como um prédio corporativo de vários andares. A máquina multinível representa as diferentes camadas de tradução, desde o clique do usuário até a eletricidade no hardware.`,
+      "Aula Completa": `Um computador não é uma coisa só, ele é uma máquina de multinível construída em camadas de abstração. Pense nisso como uma hierarquia de empresa. No andar mais alto, o Diretor, que é o programador, dá uma ordem em uma linguagem fácil de entender. Essa ordem desce para o andar dos gerentes, que é o compilador, que a transforma em instruções mais técnicas. Depois desce para o chão de fábrica, o nível do montador, ou Assembly. Até que finalmente chega nas engrenagens físicas, o hardware, onde a ordem vira puros impulsos elétricos de zeros e uns. Cada nível atua como um tradutor para o nível inferior.`
+    },
+    "Paralelismo": {
+      "Resumo Rápido": `No nível do compilador, o paralelismo é a arte de organizar e reescrever o seu código para que ele consiga rodar em vários núcleos do processador ao mesmo tempo, dividindo o esforço.`,
+      "Aula Completa": `Antigamente, os processadores tinham apenas um núcleo, funcionando como uma rodovia de pista simples, onde os carros precisavam andar em fila indiana. Hoje, até os celulares têm oito núcleos. Mas de que adianta ter oito pistas se o seu programa só sabe mandar um comando de cada vez? É aqui que o compilador avançado entra. Ele lê o seu código, aplica técnicas de paralelismo e descobre quais cálculos são independentes. Em vez de calcular tudo em fila, ele espalha as tarefas: manda uma conta para o núcleo um, outra para o núcleo dois, fazendo o programa executar diversas tarefas de forma perfeitamente simultânea.`
+    },
       "Autômatos finitos deterministicos": {
         "Resumo Rápido": `Os autômatos são os operários da linha de frente do compilador. Eles varrem o texto do seu código letra por letra para reconhecer palavras-chave, números e símbolos.`,
         "Aula Completa": `Na disciplina de compiladores, o Autômato Finito Determinístico sai do papel e vai para o código. Ele é o motor por trás do analisador léxico. Imagine que o autômato é um leitor muito rápido e disciplinado. Ele olha para a letra 'i', depois para a letra 'f', percebe que você escreveu 'if' e avisa o compilador: "Ei, acabei de encontrar um comando de condição!". Ele faz isso de forma previsível, sem nunca voltar atrás, o que torna a leitura do código super rápida.`
@@ -267,7 +295,87 @@ const conteudos = {
       "Problemas de Atribuição: NP-completo": {
         "Resumo Rápido": `Quando um problema de atribuição simples ganha restrições demais, ele entra no terreno do terror matemático e vira impossível de ser resolvido perfeitamente.`,
         "Aula Completa": `O problema de atribuir o motorista ao passageiro é fácil. Mas e se tivermos que considerar horários de descanso, a capacidade do porta-malas, o combustível restante no carro e os engarrafamentos simultaneamente? Muitas variações avançadas de atribuição escalam rapidamente para a classe NP-Completo. Quando isso acontece, o gestor do sistema sabe que não existe algoritmo mágico que encontre o escalonamento perfeito e impecável em milissegundos, sendo necessário utilizar heurísticas avançadas e inteligência artificial para achar soluções aproximadas.`
-      }
+      },
+      "Complexidade de Algoritmos (Classes P e NP)": {
+      "Resumo Rápido": `A complexidade estuda se um problema é fácil ou quase impossível de ser resolvido. Problemas classe P são resolvidos rapidamente pelo computador. Problemas NP são fáceis de checar, mas terríveis para resolver do zero.`,
+      "Aula Completa": `Na teoria da complexidade, os problemas são divididos em caixas. A caixa "P" guarda os problemas amigáveis, como ordenar uma lista ou achar uma rota de GPS, que o computador resolve em tempo útil. A caixa "NP" guarda os problemas complexos. Imagine montar um quebra-cabeça de dez mil peças todo branco: montar é extremamente difícil (isso é NP), mas se alguém te entregar ele montado, bater o olho e conferir se está certo é muito rápido. Essa é a essência do milênio na computação: tentar descobrir se todo problema fácil de conferir também pode ser fácil de resolver.`
+    },
+    "Relações de Recorrência": {
+      "Resumo Rápido": `É uma técnica matemática onde um problema é resolvido chamando a si mesmo em versões cada vez menores, até chegar a um ponto tão simples que a resposta é óbvia.`,
+      "Aula Completa": `Você já brincou com aquelas bonecas russas, as Matrioskas, onde uma boneca tem outra menor dentro, que tem outra menor dentro? As relações de recorrência na programação são exatamente assim. Quando o computador enfrenta um problema gigante, a função matemática chama a si mesma, mas passando um pedaço menor do problema. Ela vai abrindo boneca por boneca até chegar na menor de todas, que chamamos de "caso base". Quando ela resolve a pequenininha, as respostas vão voltando de dentro para fora, resolvendo o problema inteiro num efeito dominó perfeito.`
+    },
+    "Algoritmos Gulosos": {
+      "Resumo Rápido": `A técnica gulosa não planeja o futuro. Diante de várias opções, o algoritmo sempre escolhe a que parece dar o maior benefício imediato, torcendo para que isso dê certo no final.`,
+      "Aula Completa": `Imagine que você está em um restaurante estilo buffet livre e quer montar o prato mais valioso possível. Um algoritmo guloso não vai olhar o buffet inteiro antes de se servir. Ele simplesmente olha para a primeira bandeja e pensa: "Nossa, camarão é caro, vou encher metade do prato!". Ele faz a melhor escolha local possível naquele exato segundo. É um algoritmo extremamente rápido para tomar decisões. O único perigo é ele encher o prato com camarão logo no começo e, lá no final do balcão, descobrir que tinha lagosta e não ter mais espaço no prato.`
+    },
+    "Técnicas de projetos: dividir e conquistar": {
+      "Resumo Rápido": `A estratégia aqui é a delegação de tarefas. Você corta um problema colossal pela metade repetidas vezes, resolve os pedaços fáceis e depois une as respostas.`,
+      "Aula Completa": `Imagine que você recebeu a tarefa de organizar dez mil livros em ordem alfabética sozinho. É desesperador. Mas e se você usar a técnica de dividir e conquistar? Você corta a pilha no meio e dá cinco mil livros para um amigo. Ele corta no meio e passa para outro. Vocês vão dividindo até que cada pessoa fique com apenas dois livros na mão. Ordenar dois livros leva um segundo! Depois que todos ordenam suas duplinhas, vocês só precisam ir juntando as pilhas que já estão arrumadas. O que demoraria anos para uma pessoa só, é resolvido incrivelmente rápido pelo computador organizando os dados dessa forma.`
+    },
+    "Técnicas de projetos: programação dinâmica": {
+      "Resumo Rápido": `É a técnica da memorização inteligente. Se o computador sabe que vai precisar calcular a mesma coisa várias vezes no futuro, ele calcula uma vez só e anota o resultado em uma tabela.`,
+      "Aula Completa": `Pense em um chef de cozinha preparando o jantar de um restaurante lotado. Ele recebe vinte pedidos diferentes, mas percebe que quinze deles precisam de cebola picada. Um chef inexperiente cortaria uma cebola de cada vez, sempre que uma nova panela fosse ao fogo. O chef mestre usa a programação dinâmica: ele pica dez quilos de cebola de uma vez só no início da noite e guarda em uma vasilha. Na programação, o computador faz um bloco de notas na memória. Toda vez que se depara com um cálculo, ele checa o bloco. Se já fez aquela conta antes, ele não perde tempo calculando de novo, ele só copia a resposta e segue em frente.`
+    },
+    "Teorema de Euler": {
+      "Resumo Rápido": `O Teorema de Euler foca nas ruas do mapa. Ele diz se é possível desenhar um grafo inteiro passando por todas as arestas (linhas) exatamente uma única vez, sem tirar a caneta do papel.`,
+      "Aula Completa": `Lembra do problema das Sete Pontes de Königsberg? Euler criou um teorema genial para resolvê-lo sem precisar testar todos os caminhos. Ele descobriu que, para conseguir passear por todas as ruas de uma cidade sem nunca repetir uma rua e voltar ao ponto de partida, todos os cruzamentos do mapa precisam ter um número par de ruas conectadas a eles. Se existir um cruzamento com três ou cinco ruas, você obrigatoriamente vai ficar preso ou precisará repetir um caminho. É matemática pura poupando trabalho braçal.`
+    },
+    "Teorema de Hamilton": {
+      "Resumo Rápido": `Diferente de Euler que foca nas ruas, Hamilton foca nas esquinas. O Caminho Hamiltoniano busca passar por todos os vértices (pontos) do mapa exatamente uma vez.`,
+      "Aula Completa": `O Teorema de Hamilton é o famoso pesadelo do caixeiro viajante e das empresas de entrega. A regra aqui não é passar por todas as ruas, mas sim visitar todas as cidades do mapa exatamente uma vez, sem repetir nenhuma cidade. Apesar da regra parecer simples e idêntica à de Euler, matematicamente ela é incrivelmente mais difícil de calcular. Enquanto o problema de Euler é resolvido instantaneamente pelo computador (Classe P), o problema de Hamilton em mapas grandes beira a impossibilidade e cai na temida classe NP-Completa.`
+    },
+    "Grafo Simples e Multigrafo": {
+      "Resumo Rápido": `Um grafo simples é um mapa limpo, com apenas uma rua ligando duas cidades e sem retornos para a própria cidade. Se houver mais de uma rua entre as mesmas cidades, ele vira um multigrafo.`,
+      "Aula Completa": `Na modelagem, a simplicidade manda. Um Grafo Simples não aceita redundâncias. Entre a cidade A e a cidade B, só pode existir uma única rodovia. E não é permitido que uma rodovia saia da cidade A e volte para a própria cidade A (o que chamamos de laço). Se você precisa de um mapa mais complexo, onde existem pontes, rodovias e estradas de terra ligando as mesmas duas cidades, você precisa usar um Multigrafo, que permite múltiplas arestas e laços, dobrando a quantidade de informações.`
+    },
+    "Grafo Regular e Irregular": {
+      "Resumo Rápido": `No grafo regular, todos os pontos são perfeitamente populares: eles têm exatamente a mesma quantidade de conexões. Se um ponto tiver mais ligações que o outro, o grafo é irregular.`,
+      "Aula Completa": `Pense em uma rede de computadores. Se todo computador estiver conectado por cabos a exatamente três outros computadores na sala, dizemos que este é um Grafo Regular de grau três. É um sistema de equilíbrio perfeito, onde ninguém é mais importante que ninguém. Porém, o mundo real costuma ser Irregular. Nas redes sociais, uma pessoa comum tem cem amigos, enquanto uma celebridade tem dez milhões. Essa diferença massiva de conexões cria o que chamamos de Grafos Irregulares.`
+    },
+    "Matriz de Adjacência e Lista de Adjacência": {
+      "Resumo Rápido": `São as duas formas de salvar um mapa na memória. A matriz é uma tabela gigante cruzando todos os dados. A lista é um caderno enxuto anotando apenas quem é vizinho de quem.`,
+      "Aula Completa": `O computador é cego para desenhos, ele só entende números. Para ensinar um grafo a ele, podemos usar uma Matriz de Adjacência: uma tabela de excel gigante onde as colunas e linhas são as cidades, e marcamos o número "um" se houver estrada entre elas. O problema é que isso gasta muita memória com espaços vazios. A solução mais inteligente é a Lista de Adjacência: você cria um vetor com o nome das cidades, e ao lado de cada uma, anota apenas os vizinhos imediatos. É muito mais leve, econômico e rápido para varrer o mapa.`
+    },
+    "Grafos Bipartidos e Bipartidos Completos": {
+      "Resumo Rápido": `O grafo bipartido divide os pontos em dois grupos que nunca se misturam internamente, como homens e mulheres em um salão de dança. Se todos dançam com todos do outro lado, é um bipartido completo.`,
+      "Aula Completa": `Imagine dois grupos distintos: motoristas de um lado, e passageiros do outro. Um motorista não dá carona para outro motorista, ele só se conecta com passageiros. Quando dividimos um grafo assim, com arestas apenas ligando o Grupo A ao Grupo B, temos um Grafo Bipartido. Ele é a fundação matemática dos algoritmos de atribuição. E se absolutamente todos os motoristas conseguirem se conectar com absolutamente todos os passageiros, chamamos essa utopia matemática de Grafo Bipartido Completo.`
+    },
+    "Grafos Rotulados e Valorados": {
+      "Resumo Rápido": `Rotular é dar nome aos pontos, como batizar as cidades no mapa. Valorado é dar peso às linhas, como colocar o custo do pedágio ou a distância da estrada.`,
+      "Aula Completa": `Um grafo puro é só um monte de bolinhas e riscos anônimos. Para ele ser útil, precisamos dar identidade a ele. Quando damos nomes aos vértices (por exemplo, Aeroporto de Guarulhos e Aeroporto do Galeão), temos um Grafo Rotulado. Agora, quando colocamos números nas arestas que ligam esses pontos, representando a distância em quilômetros ou o preço da passagem de avião, criamos um Grafo Valorado. É essa soma de rótulos e valores que permite ao GPS traçar a melhor rota para a sua viagem.`
+    },
+    "Grafos Conexos e Desconexos": {
+      "Resumo Rápido": `Se você consegue sair de um ponto e caminhar pelas linhas até chegar em qualquer outro ponto do mapa, o grafo é conexo. Se houver ilhas isoladas, ele é desconexo.`,
+      "Aula Completa": `A conectividade fala sobre união. Um Grafo Conexo é como o continente: existe pelo menos um caminho, mesmo que longo e sinuoso, ligando qualquer cidade a qualquer outra cidade do mapa inteiro. Não há ninguém isolado. Agora, se cortarmos a ponte que liga o continente a uma ilha, o grafo se parte em pedaços independentes que não conversam mais entre si. Essa fragmentação da rede cria o que chamamos de Grafo Desconexo.`
+    },
+    "Corte de Arestas e Conectividade de Vértices": {
+      "Resumo Rápido": `São os pontos vitais e as pontes críticas de um sistema. Se removidos, o grafo que era conexo se quebra em pedaços desconexos, derrubando a rede.`,
+      "Aula Completa": `Todo sistema distribuído tem um calcanhar de Aquiles. O "Corte de Arestas", também chamado de Pontes, são as conexões que, se cortadas, dividem a rede no meio. Pense no único cabo submarino de internet que liga o Brasil à Europa. Já a "Conectividade de Vértices" analisa os Pontos de Articulação: imagine um roteador central que, se queimar, desconecta a empresa inteira. Os engenheiros de redes usam os grafos para caçar essas pontes e nós vulneráveis, instalando backups exatamente nesses lugares para evitar que o sistema caia.`
+    },
+    "Emparelhamento (Matching)": {
+      "Resumo Rápido": `O emparelhamento é um quebra-cabeça de casais. O objetivo é formar o máximo de pares no grafo sem que ninguém divida o mesmo parceiro.`,
+      "Aula Completa": `Imagine um salão de dança e você precisa formar casais. A regra de ouro do Emparelhamento, ou Matching, é: duas arestas selecionadas nunca podem compartilhar o mesmo vértice. Ou seja, ninguém pode dançar com duas pessoas ao mesmo tempo. É um subconjunto de conexões exclusivas. Na engenharia, usamos o Emparelhamento Máximo para ligar médicos aos plantões hospitalares ou peças às máquinas na fábrica, garantindo que ninguém fique sobrecarregado e nenhum recurso seja desperdiçado.`
+    },
+    "Planaridade": {
+      "Resumo Rápido": `Um grafo planar é aquele que pode ser desenhado em uma folha de papel sem que nenhuma de suas linhas se cruze ou passe por cima da outra.`,
+      "Aula Completa": `Aplanaridade parece um exercício de desenho infantil, mas é um conceito de engenharia milionário. Ao projetar a placa mãe do seu computador, os engenheiros precisam conectar dezenas de chips. Se as trilhas elétricas (que são as arestas) se cruzarem na mesma camada de silício, ocorre um curto-circuito. Portanto, descobrir se um esquema elétrico é um Grafo Planar permite imprimir toda a placa de circuito em uma única camada plana de forma segura, barateando imensamente o custo de fabricação.`
+    },
+    "Árvore Estritamente Binária": {
+      "Resumo Rápido": `Uma árvore é um grafo sem ciclos. Na versão estritamente binária, existe uma regra rigorosa: todo ponto ou não tem nenhum filho, ou tem obrigatoriamente dois filhos. Não existe filho único.`,
+      "Aula Completa": `Dentro dos grafos, as Árvores são estruturas hierárquicas, como a árvore genealógica da sua família, com a raiz no topo. Nelas, é impossível andar em círculos. Uma Árvore Binária normal permite que um pai tenha um filho só. Mas a Árvore Estritamente Binária é radical: cada nó (ou vértice) é uma encruzilhada perfeita. Ou ele se bifurca em dois caminhos exatos (esquerda e direita), ou ele é uma folha final sem filhos. Ela é fundamental para algoritmos de busca velozes e compressão de arquivos.`
+    },
+    "Modelos de Ciclo de Vida de Software": {
+      "Resumo Rápido": `Saindo um pouco dos algoritmos locais e olhando para o projeto como um todo, precisamos de modelos de engenharia para organizar o trabalho em equipe, como o Cascata e os métodos Ágeis.`,
+      "Aula Completa": `Não basta ter o algoritmo mais eficiente do mundo se a equipe de programação for uma bagunça. Para isso existem os modelos de projeto de software. Eles dizem como a fábrica vai operar, guiando a transformação de ideias abstratas em sistemas gigantes e seguros.`
+    },
+    "Modelo em Cascata e Modelo em Espiral": {
+      "Resumo Rápido": `O Cascata é o jeito antigo: faz uma fase inteira para só depois pular pra próxima, sem volta. O Espiral funciona dando voltas, focando loucamente em descobrir e matar riscos antes que virem problemas.`,
+      "Aula Completa": `O modelo em Cascata age como a construção civil: você levanta a fundação, depois a parede, e depois o teto. Você precisa terminar cem por cento do planejamento antes de escrever a primeira linha de código, e se lá na frente o cliente mudar de ideia, derrubar a parede custa muito caro. Para projetos incertos, nasceu o Modelo em Espiral. Nele, a equipe dá voltas contínuas desenvolvendo protótipos menores. A cada volta na espiral, o foco central é a análise de riscos, testando as áreas mais perigosas do projeto primeiro para evitar falhas milionárias no futuro.`
+    },
+    "Modelos Iterativo, Incremental e Evolucionário": {
+      "Resumo Rápido": `Ao invés de entregar o software pronto daqui a dois anos, esses processos fatiam o sistema. Entregam partes funcionais aos poucos, melhorando e evoluindo com o feedback do usuário.`,
+      "Aula Completa": `Em vez do tudo ou nada, o mercado hoje usa processos em fases. O Desenvolvimento Incremental é como montar um carro: este mês eu entrego a roda, no mês que vem eu entrego o motor, entregando partes completas aos poucos. O Iterativo é diferente: eu entrego o esboço do carro inteiro no primeiro mês, e nos próximos eu vou refinando e melhorando a qualidade desse mesmo carro. Quando juntamos os dois, temos o Modelo Evolucionário, base das metodologias ágeis modernas. Nele, o software é um organismo vivo que é lançado ainda simples e vai ganhando músculos semana a semana, adaptando-se perfeitamente às exigências do mundo real.`
+    }
     }
   
 };

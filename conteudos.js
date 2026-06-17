@@ -431,6 +431,521 @@ As expressões regulares são equivalentes aos autômatos finitos e constituem a
     }, 
     "Teoria dos Grafos e Complexidade": {
       "Fundamentos de grafos: História da teoria de grafos; Representação de problemas com grafos": {
+"Resumo Rápido": `A teoria dos grafos é a matemática das conexões. Ela representa objetos através de vértices e as relações entre eles através de arestas, permitindo modelar caminhos, redes e tomadas de decisão.`,
+
+"Aula Completa": `A teoria dos grafos surgiu da necessidade de resolver problemas envolvendo relações entre objetos e caminhos possíveis. Os objetos são representados por pontos chamados vértices, enquanto as ligações entre eles são representadas por linhas chamadas arestas.
+
+Um exemplo simples seria três cidades ligadas por estradas. Cada cidade corresponde a um vértice e cada estrada corresponde a uma aresta. Dessa forma, podemos transformar problemas reais em estruturas matemáticas capazes de serem analisadas por algoritmos.
+
+Os grafos são utilizados em diversas áreas, como sistemas de GPS, redes sociais, redes de computadores, linhas de transmissão elétrica, roteamento da internet e inteligência artificial.
+
+É importante lembrar que o objetivo dos grafos nem sempre é encontrar o caminho mais curto. Em muitos casos, existem pesos associados às arestas, representando tempo, custo, segurança ou confiabilidade. Assim, o melhor caminho depende do problema que desejamos resolver.
+
+Graças a essa flexibilidade, os grafos tornaram-se uma das ferramentas mais importantes da computação moderna.`
+},
+
+"Fundamentos de algoritmos; Eficiência de algoritmos; Custo operacional": {
+"Resumo Rápido": `Os algoritmos são sequências de instruções capazes de resolver problemas. A análise de algoritmos busca determinar quanto tempo e memória são necessários para executar essas instruções.`,
+
+"Aula Completa": `Um algoritmo pode ser visto como uma receita de cozinha. Ele descreve uma sequência de passos organizada para atingir um objetivo específico.
+
+Entretanto, dois algoritmos podem produzir exatamente o mesmo resultado, mas consumindo quantidades diferentes de tempo e memória. Por esse motivo, surgiu a análise de algoritmos, cujo objetivo é medir a eficiência das soluções.
+
+Os dois principais fatores analisados são o tempo de execução e o espaço ocupado em memória. Um algoritmo eficiente é capaz de resolver o problema utilizando menos recursos computacionais.
+
+A quantidade de linhas de código não determina se um programa é mais rápido. O que realmente importa é a quantidade de operações realizadas durante a execução. Um algoritmo pequeno pode possuir uma complexidade muito maior do que outro aparentemente mais longo.
+
+A análise de algoritmos permite prever como o desempenho do programa irá se comportar quando a quantidade de dados aumentar, tornando-se uma ferramenta fundamental para o desenvolvimento de sistemas eficientes.`
+},
+
+"Fundamentos de algoritmos; Eficiência de algoritmos; Custo operacional": {
+"Resumo Rápido": `A notação Big O é utilizada para descrever como o custo de um algoritmo cresce à medida que a quantidade de dados aumenta.`,
+
+"Aula Completa": `A análise de complexidade permite medir o comportamento dos algoritmos em relação ao crescimento da entrada de dados.
+
+A complexidade constante O de um representa algoritmos extremamente rápidos, onde o tempo permanece praticamente o mesmo independentemente da quantidade de dados.
+
+A complexidade logarítmica O de log N aparece em algoritmos como a busca binária, onde a cada passo metade do problema é descartada.
+
+A complexidade linear O de N ocorre quando é necessário percorrer todos os elementos pelo menos uma vez.
+
+A complexidade linearítmica O de N log N é encontrada em algoritmos eficientes de ordenação, como o Merge Sort.
+
+A complexidade quadrática O de N ao quadrado aparece em algoritmos que precisam comparar cada elemento com todos os outros.
+
+Já a complexidade exponencial O de dois elevado a N cresce de forma explosiva, tornando-se inviável para problemas grandes.
+
+Compreender essas classes permite escolher soluções capazes de processar milhões de dados sem comprometer o desempenho do sistema.`
+},
+
+"Estrutura de dados": {
+"Resumo Rápido": `Para armazenar grafos na memória do computador, utilizamos estruturas de dados que permitem guardar os vértices e suas conexões de maneira eficiente.`,
+
+"Aula Completa": `Embora os grafos sejam estruturas matemáticas, é necessário representá-los dentro do computador através de estruturas de dados.
+
+A representação escolhida influencia diretamente o consumo de memória e a velocidade das operações realizadas sobre o grafo.
+
+Existem duas formas clássicas de armazenamento: a matriz de adjacência e a lista de adjacência.
+
+A escolha da estrutura depende do tamanho do problema e do tipo de operação que será realizada com maior frequência.
+
+Representar adequadamente um grafo é fundamental para permitir que os algoritmos possam navegar pelas conexões, realizar buscas e encontrar soluções para os problemas modelados.`
+},
+
+"Estrutura de dados": {
+"Resumo Rápido": `Os vetores possuem tamanho fixo e exigem deslocamentos durante inserções. As listas encadeadas foram criadas para oferecer maior flexibilidade e crescimento dinâmico.`,
+
+"Aula Completa": `Os vetores são estruturas simples e eficientes para acesso direto aos elementos, porém possuem tamanho fixo e apresentam dificuldades quando é necessário inserir elementos no meio da estrutura.
+
+As listas encadeadas surgiram para resolver esse problema. Nelas, cada elemento armazena o dado e um ponteiro para o próximo elemento da sequência.
+
+Isso permite que a estrutura cresça dinamicamente conforme a necessidade, sem a limitação de um tamanho previamente definido.
+
+Existem listas simplesmente encadeadas, nas quais cada nó aponta apenas para o próximo elemento, listas duplamente encadeadas, onde cada nó conhece o elemento anterior e o próximo, e listas circulares, nas quais o último elemento aponta novamente para o primeiro.
+
+Essas estruturas são amplamente utilizadas na implementação de listas de adjacência em grafos e em diversas aplicações que exigem flexibilidade e escalabilidade.`
+},
+
+"Estrutura de dados": {
+"Resumo Rápido": `A matriz de adjacência e a lista de adjacência são as duas formas mais comuns de representar grafos dentro do computador.`,
+
+"Aula Completa": `A matriz de adjacência organiza os vértices em linhas e colunas. Cada posição da matriz indica se existe conexão entre dois vértices ou qual é o peso associado àquela ligação.
+
+Sua principal vantagem é a rapidez nas consultas, pois basta acessar uma única posição da matriz para verificar a existência de uma conexão.
+
+Entretanto, essa abordagem desperdiça bastante memória em grafos grandes e esparsos, já que muitas posições permanecem vazias.
+
+A lista de adjacência resolve esse problema armazenando apenas os vértices efetivamente conectados.
+
+Ela consome menos memória e é muito utilizada em aplicações envolvendo grandes redes. Contudo, algumas operações de busca podem ser mais lentas, pois exigem percorrer toda a lista associada a um vértice.
+
+A escolha entre matriz e lista depende do equilíbrio desejado entre velocidade e economia de memória.`
+},
+"Grafos: Dígrafos e multigrafos; Isomorfismo; Grafos regulares, completos e bipartidos": {
+"Resumo Rápido": `Os grafos podem possuir diferentes características. Eles podem ter direção, múltiplas arestas, regularidade ou serem divididos em conjuntos distintos, permitindo modelar diversos problemas do mundo real.`,
+
+"Aula Completa": `Um grafo é formado por vértices e arestas, mas dependendo da forma como essas conexões são organizadas, surgem diferentes tipos de grafos.
+
+Existem grafos direcionados, também chamados de dígrafos, onde as conexões possuem um sentido específico. Também existem os grafos não direcionados, onde as relações são mútuas.
+
+Alguns grafos permitem múltiplas conexões entre os mesmos vértices, formando os multigrafos. Outros possuem propriedades especiais, como os grafos regulares, nos quais todos os vértices possuem a mesma quantidade de conexões, e os grafos bipartidos, onde os vértices são divididos em dois grupos distintos.
+
+Essas diferentes classificações permitem adaptar os grafos para representar desde redes sociais até sistemas de comunicação e problemas de otimização.`
+},
+
+"Grafos direcionados e não direcionados": {
+"Resumo Rápido": `Nos grafos não direcionados, as relações são mútuas. Nos grafos direcionados, as conexões possuem um sentido definido, representado por setas.`,
+
+"Aula Completa": `Em um grafo não direcionado, a conexão entre dois vértices é bidirecional. Se A está ligado a B, então B também está ligado a A. Essa estrutura é comum em amizades em redes sociais ou em estradas de mão dupla.
+
+Já nos grafos direcionados, chamados de dígrafos, as conexões possuem uma direção específica. Se existir uma aresta de A para B, isso não significa que existe uma ligação de B para A.
+
+Os dígrafos são muito utilizados em sistemas de dependências, fluxogramas, redes de comunicação e relacionamentos onde a informação flui em apenas um sentido.
+
+A presença ou ausência de direção altera completamente os algoritmos utilizados para percorrer e analisar os grafos.`
+},
+
+"Grafo Simples e Multigrafo": {
+"Resumo Rápido": `Os grafos simples permitem apenas uma ligação entre dois vértices e não aceitam laços. Os multigrafos permitem múltiplas arestas e conexões com o próprio vértice.`,
+
+"Aula Completa": `Um grafo simples é aquele em que dois vértices podem estar ligados apenas por uma única aresta. Além disso, não é permitido que um vértice esteja ligado a ele mesmo.
+
+Já os multigrafos são mais flexíveis. Eles permitem que existam várias arestas conectando os mesmos vértices e também aceitam laços, que são conexões que saem e retornam ao mesmo vértice.
+
+Essa característica torna os multigrafos úteis em situações onde podem existir diferentes tipos de relacionamento entre os mesmos elementos, como múltiplas rotas entre duas cidades ou diferentes linhas de comunicação entre computadores.`
+},
+
+"Grafos Isomorfos": {
+"Resumo Rápido": `Dois grafos são isomorfos quando possuem a mesma estrutura de conexões, mesmo que sejam desenhados de maneiras diferentes.`,
+
+"Aula Completa": `Dois grafos podem parecer completamente diferentes visualmente, mas ainda assim representarem exatamente as mesmas relações entre os vértices.
+
+Quando é possível estabelecer uma correspondência entre os vértices dos dois grafos preservando todas as conexões existentes, dizemos que eles são isomorfos.
+
+Em outras palavras, a aparência do desenho não importa. O que realmente importa é a estrutura das relações.
+
+O estudo do isomorfismo é importante porque permite identificar quando dois problemas aparentemente diferentes possuem a mesma estrutura matemática, possibilitando reaproveitar soluções e algoritmos já conhecidos.`
+},
+
+"Subgrafos": {
+"Resumo Rápido": `Um subgrafo é uma parte de um grafo maior, obtida através da seleção de alguns vértices e arestas.`,
+
+"Aula Completa": `Um subgrafo pode ser entendido como um recorte realizado em um grafo maior.
+
+Ao selecionar determinados vértices e as arestas que os conectam, é possível formar uma estrutura menor que continua obedecendo às propriedades do grafo original.
+
+Os subgrafos são muito úteis na análise de grandes redes, pois permitem estudar apenas uma parte do sistema sem a necessidade de analisar todas as conexões existentes.
+
+Essa técnica é utilizada em redes sociais, redes de computadores e em problemas de agrupamento de dados.`
+},
+
+"Grafos Regulares e Irregulares": {
+"Resumo Rápido": `Nos grafos regulares todos os vértices possuem o mesmo grau. Nos grafos irregulares, cada vértice pode possuir uma quantidade diferente de conexões.`,
+
+"Aula Completa": `O grau de um vértice corresponde ao número de arestas ligadas a ele.
+
+Quando todos os vértices possuem exatamente o mesmo grau, temos um grafo regular. Essa uniformidade torna a estrutura mais equilibrada e previsível.
+
+Por outro lado, nos grafos irregulares, alguns vértices podem possuir muitas conexões enquanto outros possuem poucas.
+
+A maioria das redes reais é irregular. Redes sociais, por exemplo, possuem pessoas extremamente populares e outras com poucos relacionamentos.
+
+Essa diferença no número de conexões influencia diretamente a propagação de informações e o comportamento dos algoritmos aplicados sobre a rede.`
+},
+
+"Grafos Bipartidos e Bipartidos Completos": {
+"Resumo Rápido": `Os grafos bipartidos dividem os vértices em dois conjuntos. Nos bipartidos completos, cada vértice de um conjunto se conecta com todos os vértices do outro conjunto.`,
+
+"Aula Completa": `Em um grafo bipartido, os vértices são separados em dois grupos distintos.
+
+As conexões só podem ocorrer entre vértices pertencentes a conjuntos diferentes. Não é permitido que dois vértices do mesmo grupo estejam ligados entre si.
+
+Essa estrutura é muito utilizada em problemas de atribuição, como relacionar professores a disciplinas, funcionários a tarefas ou clientes a produtos.
+
+Quando todos os vértices de um conjunto estão conectados com todos os vértices do outro conjunto, temos um grafo bipartido completo.
+
+Um grafo K(m,n) possui m vértices em um conjunto e n vértices no outro. O número total de arestas é obtido pelo produto m vezes n.
+
+Esses grafos possuem grande importância em problemas de emparelhamento e otimização.`
+},
+
+"Grafos Rotulados e Valorados": {
+"Resumo Rápido": `Os grafos rotulados atribuem nomes aos vértices, enquanto os grafos valorados adicionam pesos às arestas.`,
+
+"Aula Completa": `Um grafo rotulado é aquele em que os vértices recebem identificações, permitindo associar os pontos do grafo a objetos reais, como cidades, pessoas ou computadores.
+
+Já os grafos valorados, também chamados de ponderados, possuem números associados às arestas. Esses valores representam distância, tempo, custo, consumo de energia ou qualquer outra característica importante para o problema.
+
+Os pesos tornam os grafos extremamente versáteis, pois permitem que os algoritmos escolham caminhos levando em consideração diversos critérios, e não apenas a quantidade de conexões existentes.
+
+Aplicativos de GPS, redes elétricas e sistemas logísticos são exemplos clássicos de utilização de grafos ponderados.`
+},
+
+"Grafos Conexos e Desconexos": {
+"Resumo Rápido": `Os grafos conexos permitem alcançar qualquer vértice a partir de outro. Nos grafos desconexos existem componentes isolados sem comunicação entre si.`,
+
+"Aula Completa": `Um grafo é considerado conexo quando existe pelo menos um caminho ligando qualquer par de vértices.
+
+Isso significa que todos os elementos da estrutura fazem parte de uma única rede de comunicação.
+
+Por outro lado, em um grafo desconexo existem grupos separados de vértices que não possuem ligação entre si.
+
+Esses grupos independentes são chamados de componentes conexos.
+
+A conectividade é uma característica fundamental em sistemas de comunicação, redes de computadores e transporte, pois determina se é possível transmitir informações ou deslocar-se entre diferentes pontos da rede.`
+},
+"Caminhos e Ciclos": {
+"Resumo Rápido": `Os caminhos representam sequências de vértices conectados por arestas. Os ciclos são caminhos especiais que retornam ao ponto inicial, formando um percurso fechado.`,
+
+"Aula Completa": `Em teoria dos grafos, um caminho é uma sequência de vértices ligados por arestas, permitindo sair de um ponto e chegar a outro através das conexões existentes.
+
+Os caminhos representam rotas, sequências de decisões ou relações entre objetos.
+
+Já um ciclo é um caminho fechado, ou seja, uma sequência de vértices e arestas que retorna ao vértice de origem.
+
+Os ciclos são importantes em diversas aplicações, como roteamento de redes, circuitos elétricos e detecção de dependências em sistemas.
+
+Enquanto um caminho representa apenas uma forma de deslocamento, os ciclos representam estruturas que voltam ao ponto de partida, formando um circuito fechado.`
+},
+
+"Teorema de Euler": {
+"Resumo Rápido": `Euler concentrou seus estudos nas arestas dos grafos. Os problemas eulerianos buscam percorrer todas as arestas exatamente uma vez.`,
+
+"Aula Completa": `A teoria dos grafos surgiu a partir do famoso problema das Sete Pontes de Königsberg, estudado por Leonhard Euler.
+
+Euler percebeu que a questão principal não estava nos vértices, mas nas arestas do grafo. O objetivo era atravessar todas as pontes exatamente uma vez.
+
+Quando é possível percorrer todas as arestas sem repeti-las, temos um caminho euleriano. Se além disso for possível retornar ao vértice inicial, temos um ciclo euleriano.
+
+Uma condição importante para a existência de um ciclo euleriano é que todos os vértices possuam grau par.
+
+Os problemas eulerianos possuem foco nas arestas, sendo amplamente utilizados em logística, inspeção de redes e planejamento de rotas.`
+},
+
+"Teorema de Hamilton": {
+"Resumo Rápido": `Hamilton concentrou seus estudos nos vértices. Os problemas hamiltonianos buscam visitar todos os vértices exatamente uma vez.`,
+
+"Aula Completa": `Enquanto Euler se preocupava em percorrer todas as arestas, Hamilton concentrou seus estudos nos vértices.
+
+Um caminho hamiltoniano é aquele que visita todos os vértices exatamente uma vez.
+
+Quando, além de visitar todos os vértices, o percurso retorna ao ponto de partida, forma-se um ciclo hamiltoniano.
+
+Nos problemas hamiltonianos, o foco não está nas arestas, mas sim em garantir que todos os vértices sejam visitados.
+
+Esse tipo de problema aparece em planejamento de rotas, problemas do caixeiro viajante e diversas aplicações de otimização.
+
+Diferentemente dos problemas eulerianos, os problemas hamiltonianos costumam ser muito mais complexos e pertencem a classes difíceis de serem resolvidas computacionalmente.`
+},
+
+"Corte de Arestas e Conectividade de Vértices": {
+"Resumo Rápido": `Os cortes representam elementos críticos da rede. A remoção dessas conexões pode dividir um grafo que antes era conexo.`,
+
+"Aula Completa": `Nem todas as arestas e vértices possuem a mesma importância dentro de uma rede.
+
+Algumas conexões são tão importantes que, ao serem removidas, provocam a separação do grafo em componentes independentes.
+
+Quando uma aresta possui essa característica, ela é chamada de ponte ou corte de aresta.
+
+Da mesma forma, alguns vértices podem ser fundamentais para manter a conectividade do sistema. A quantidade mínima de vértices ou arestas necessárias para desconectar o grafo está relacionada ao conceito de conectividade.
+
+Esses estudos são extremamente importantes em redes de computadores, sistemas elétricos e planejamento de infraestrutura, pois permitem identificar pontos vulneráveis do sistema.`
+},
+
+"Emparelhamento (Matching)": {
+"Resumo Rápido": `O emparelhamento consiste em formar pares independentes, garantindo que nenhum vértice participe de mais de uma associação.`,
+
+"Aula Completa": `O problema do emparelhamento busca selecionar arestas de forma que nenhum vértice seja utilizado mais de uma vez.
+
+Em outras palavras, cada elemento só pode participar de um único par.
+
+Esse conceito é amplamente utilizado em problemas de atribuição, como relacionar funcionários a tarefas, médicos a plantões ou alunos a orientadores.
+
+Quanto maior o número de pares independentes encontrados, maior será o emparelhamento obtido.
+
+Os algoritmos de matching possuem aplicações em logística, inteligência artificial, economia e sistemas de recomendação.`
+},
+
+"Planaridade": {
+"Resumo Rápido": `Um grafo planar é aquele que pode ser desenhado sem que suas arestas se cruzem.`,
+
+"Aula Completa": `A planaridade é uma propriedade geométrica dos grafos.
+
+Um grafo é considerado planar quando é possível desenhá-lo em um plano sem que as arestas se cruzem.
+
+Mesmo que uma representação inicial apresente cruzamentos, pode existir outra forma de desenhá-lo sem que isso aconteça.
+
+A planaridade possui grande importância em projetos de circuitos eletrônicos, mapas e sistemas de comunicação, pois cruzamentos excessivos podem representar conflitos ou dificuldades de implementação.
+
+Determinar se um grafo é planar é um problema clássico da teoria dos grafos e possui diversas aplicações práticas.`
+},
+
+"Árvore Estritamente Binária": {
+"Resumo Rápido": `Uma árvore estritamente binária é uma árvore em que cada nó possui exatamente dois filhos ou nenhum filho.`,
+
+"Aula Completa": `As árvores são um tipo especial de grafo que não possuem ciclos.
+
+Na árvore estritamente binária existe uma regra rígida: cada nó deve possuir exatamente dois filhos ou nenhum filho.
+
+Os nós que não possuem descendentes são chamados de folhas.
+
+Essa estrutura é amplamente utilizada em algoritmos de busca, árvores de expressão, compiladores e organização de dados.
+
+A característica de possuir apenas dois filhos em cada nível torna essas árvores extremamente organizadas e eficientes para diversas operações computacionais.
+
+Graças a essa propriedade, árvores binárias são uma das estruturas mais importantes da ciência da computação.`
+},
+
+"Matriz de Adjacência e Matriz de Incidência": {
+"Resumo Rápido": `As matrizes permitem representar grafos dentro do computador através de tabelas que armazenam vértices e arestas.`,
+
+"Aula Completa": `Uma das formas de representar grafos na memória é através de matrizes.
+
+Na matriz de adjacência, as linhas e colunas representam os vértices. O cruzamento entre eles indica se existe conexão ou qual é o peso associado àquela ligação.
+
+Já a matriz de incidência relaciona vértices e arestas. As linhas representam os vértices e as colunas representam as arestas.
+
+Essas representações permitem transformar estruturas matemáticas em estruturas computacionais, possibilitando a aplicação de algoritmos para busca, análise e otimização.
+
+A escolha entre matriz de adjacência, matriz de incidência ou lista de adjacência depende do problema e da quantidade de memória disponível.`
+},
+"Relações de Recorrência": {
+"Resumo Rápido": `As relações de recorrência descrevem sequências em que cada elemento é obtido a partir dos elementos anteriores, permitindo modelar problemas recursivos e analisar algoritmos.`,
+
+"Aula Completa": `As relações de recorrência são equações utilizadas para definir sequências através dos próprios valores da sequência.
+
+Ao contrário de um conjunto, onde a ordem dos elementos não importa, em uma sequência a posição dos elementos é fundamental. A lei de formação é a regra responsável por determinar qual será o próximo valor.
+
+Uma relação de recorrência permite calcular um elemento utilizando os elementos anteriores. Esse conceito é muito utilizado em matemática e ciência da computação.
+
+Na programação, a ideia aparece naturalmente em algoritmos recursivos, nos quais uma função chama a si mesma para resolver versões menores do mesmo problema.
+
+Exemplos clássicos incluem a sequência de Fibonacci, cálculo de fatoriais e análise de algoritmos recursivos.
+
+O estudo das relações de recorrência permite compreender como problemas complexos podem ser quebrados em problemas menores até chegar a uma solução simples.`
+},
+
+"Algoritmos Gulosos": {
+"Resumo Rápido": `Os algoritmos gulosos sempre escolhem a melhor solução local disponível, esperando que essa escolha conduza à melhor solução global do problema.`,
+
+"Aula Completa": `A estratégia gulosa consiste em tomar, a cada etapa, a decisão que parece ser a mais vantajosa naquele momento.
+
+O algoritmo não revisa decisões anteriores nem tenta analisar todas as possibilidades existentes. Ele simplesmente escolhe a melhor opção local e segue em frente.
+
+Um exemplo clássico é o problema do troco. Ao devolver dinheiro para um cliente, normalmente procuramos utilizar a menor quantidade possível de moedas ou cédulas.
+
+Outro exemplo aparece na escolha de atividades, onde o objetivo é encaixar o maior número possível de tarefas em um intervalo de tempo.
+
+Os algoritmos gulosos são rápidos e eficientes para diversos problemas, porém nem sempre produzem a solução ótima. Em alguns casos, uma escolha local aparentemente perfeita pode impedir que a melhor solução global seja encontrada.
+
+Mesmo assim, essa técnica é extremamente importante devido à sua simplicidade e eficiência computacional.`
+},
+
+"Técnicas de projetos: dividir e conquistar": {
+"Resumo Rápido": `A estratégia dividir e conquistar consiste em quebrar um problema grande em vários subproblemas menores, resolvê-los separadamente e combinar as respostas no final.`,
+
+"Aula Completa": `Muitos problemas complexos podem ser resolvidos de maneira mais eficiente quando são divididos em partes menores.
+
+A técnica dividir e conquistar funciona exatamente dessa maneira. Primeiro, o problema original é dividido em subproblemas menores. Em seguida, cada subproblema é resolvido individualmente. Por fim, as soluções parciais são combinadas para produzir a resposta final.
+
+Um exemplo clássico é a busca binária. Em vez de percorrer todos os elementos de uma lista, o algoritmo divide repetidamente o conjunto pela metade, descartando as regiões onde o valor procurado não pode estar.
+
+Outros algoritmos famosos, como Merge Sort e Quick Sort, também utilizam essa estratégia.
+
+Dividir e conquistar é uma das técnicas mais importantes da análise de algoritmos, pois permite reduzir drasticamente o número de operações necessárias para resolver determinados problemas.`
+},
+
+"Técnicas de projetos: programação dinâmica": {
+"Resumo Rápido": `A programação dinâmica evita cálculos repetidos armazenando soluções intermediárias, tornando a resolução de problemas muito mais eficiente.`,
+
+"Aula Completa": `A programação dinâmica é uma técnica utilizada em problemas que apresentam subproblemas repetitivos.
+
+Em vez de recalcular as mesmas respostas várias vezes, o algoritmo armazena os resultados já obtidos e os reutiliza quando necessário.
+
+Essa abordagem permite economizar tempo e reduzir significativamente a complexidade computacional.
+
+Problemas como a sequência de Fibonacci, o problema da mochila e diversos problemas de otimização são resolvidos de maneira muito mais eficiente através da programação dinâmica.
+
+Existem duas abordagens principais: memoização, em que os resultados são armazenados durante as chamadas recursivas, e tabulação, em que uma tabela é construída gradualmente até chegar à solução final.
+
+Graças ao reaproveitamento dos resultados intermediários, a programação dinâmica é capaz de transformar algoritmos extremamente lentos em soluções viáveis para problemas complexos.`
+},
+
+"Fluxos em rede": {
+"Resumo Rápido": `Os fluxos em rede estudam a movimentação de recursos através das conexões de um grafo, respeitando as capacidades de cada ligação.`,
+
+"Aula Completa": `Em muitos problemas, não basta saber se existe um caminho entre dois pontos. É necessário analisar quanto pode ser transportado através desse caminho.
+
+Os fluxos em rede representam essa situação através de grafos valorados, onde cada aresta possui uma capacidade máxima.
+
+Essas capacidades podem representar largura de banda em redes de computadores, vazão em tubulações, capacidade de transporte em rodovias ou distribuição de energia elétrica.
+
+O objetivo é controlar a circulação dos recursos sem ultrapassar os limites impostos pelas conexões.
+
+Os problemas de fluxo possuem aplicações em logística, telecomunicações, sistemas hidráulicos e redes elétricas, sendo uma das áreas mais importantes da teoria dos grafos.`
+},
+
+"Fluxo máximo": {
+"Resumo Rápido": `O problema do fluxo máximo busca determinar a maior quantidade possível de recurso que pode ser transportada entre dois pontos da rede.`,
+
+"Aula Completa": `No problema do fluxo máximo, existe um vértice de origem, responsável por fornecer recursos, e um vértice de destino, responsável por recebê-los.
+
+Cada aresta possui uma capacidade máxima, limitando a quantidade de fluxo que pode passar por ela.
+
+O objetivo é encontrar a maior quantidade de recurso que pode ser enviada da origem ao destino sem violar as capacidades existentes.
+
+Algoritmos clássicos, como Ford-Fulkerson, foram desenvolvidos para resolver esse problema.
+
+Aplicações práticas incluem distribuição de energia, roteamento de pacotes na internet, logística de transporte e gerenciamento de sistemas de abastecimento.
+
+O estudo do fluxo máximo mostra como a teoria dos grafos pode ser utilizada para otimizar recursos em redes complexas.`
+},
+
+"Problemas de Atribuição": {
+"Resumo Rápido": `Os problemas de atribuição procuram encontrar a melhor forma de associar elementos de dois conjuntos distintos, minimizando custos ou maximizando benefícios.`,
+
+"Aula Completa": `Muitos problemas do mundo real envolvem a necessidade de relacionar elementos pertencentes a dois conjuntos diferentes.
+
+Exemplos incluem associar funcionários a tarefas, médicos a hospitais, motoristas a passageiros e máquinas a processos.
+
+O objetivo é encontrar uma combinação que produza o melhor resultado possível, seja minimizando custos, reduzindo tempo ou aumentando a eficiência.
+
+Esses problemas são normalmente representados por grafos bipartidos e possuem grande importância em logística, administração e pesquisa operacional.
+
+Diversos algoritmos foram desenvolvidos para resolver problemas de atribuição de maneira eficiente, permitindo otimizar recursos em sistemas complexos.`
+},
+"NP-completo e intratabilidade": {
+"Resumo Rápido": `Existem problemas tão complexos que não conhecemos algoritmos eficientes capazes de resolvê-los em tempo viável. Esses problemas são chamados de intratáveis e muitos deles pertencem à classe NP-Completa.`,
+
+"Aula Completa": `Nem todos os problemas da computação possuem soluções rápidas conhecidas. Alguns problemas apresentam um crescimento tão explosivo no número de possibilidades que se tornam praticamente impossíveis de serem resolvidos por força bruta.
+
+Esses problemas são chamados de intratáveis. Entre eles, destacam-se os problemas NP-Completos.
+
+Um exemplo clássico é o Problema do Caixeiro Viajante, no qual é necessário encontrar a menor rota para visitar diversas cidades e retornar ao ponto inicial. À medida que a quantidade de cidades aumenta, o número de combinações cresce de forma gigantesca.
+
+Até hoje, não se conhece um algoritmo capaz de resolver todos os problemas NP-Completos de maneira eficiente.
+
+Por esse motivo, em aplicações reais, muitas vezes são utilizadas soluções aproximadas ou heurísticas, capazes de fornecer respostas muito boas sem necessariamente garantir a solução perfeita.`
+},
+
+"Problemas de Atribuição: NP-completo": {
+"Resumo Rápido": `Algumas variações dos problemas de atribuição tornam-se extremamente complexas e passam a pertencer à classe dos problemas NP-Completos.`,
+
+"Aula Completa": `Problemas simples de atribuição podem ser resolvidos de maneira eficiente. Entretanto, quando são adicionadas restrições extras, a dificuldade aumenta drasticamente.
+
+Por exemplo, associar funcionários a tarefas é relativamente simples. Porém, se forem adicionadas restrições envolvendo horários, prioridades, custos e dependências, o número de combinações possíveis cresce rapidamente.
+
+Em muitos casos, esses problemas tornam-se NP-Completos.
+
+Isso significa que não existe um algoritmo conhecido capaz de encontrar a solução ótima em tempo polinomial para todos os casos.
+
+Por essa razão, métodos aproximados e algoritmos heurísticos são frequentemente utilizados para encontrar soluções suficientemente boas em tempo aceitável.`
+},
+
+"Complexidade de Algoritmos (Classes P e NP)": {
+"Resumo Rápido": `As classes P e NP agrupam problemas de acordo com a dificuldade para resolvê-los. Problemas da classe P possuem soluções eficientes, enquanto os da classe NP são muito mais complexos.`,
+
+"Aula Completa": `A teoria da complexidade busca classificar os problemas de acordo com a quantidade de recursos necessários para resolvê-los.
+
+Os problemas da classe P são aqueles para os quais existem algoritmos eficientes conhecidos. Isso significa que podem ser resolvidos em tempo polinomial.
+
+Problemas como ordenação de listas, busca em grafos e cálculo do menor caminho pertencem a essa classe.
+
+Já a classe NP engloba problemas cujas soluções podem ser verificadas rapidamente, mesmo que encontrá-las seja extremamente difícil.
+
+Uma das maiores questões da ciência da computação é determinar se P é igual a NP.
+
+Caso essa igualdade fosse demonstrada, significaria que todos os problemas cujas soluções são fáceis de verificar também seriam fáceis de resolver.
+
+Até hoje, essa pergunta permanece sem resposta e é considerada um dos maiores problemas em aberto da matemática e da computação.`
+},
+
+"Modelos de Ciclo de Vida de Software": {
+"Resumo Rápido": `Os modelos de ciclo de vida organizam o desenvolvimento de software, definindo etapas e estratégias para transformar ideias em sistemas funcionais.`,
+
+"Aula Completa": `Desenvolver um software envolve muito mais do que apenas escrever código. É necessário planejar, analisar riscos, construir, testar e validar cada etapa do projeto.
+
+Para organizar esse processo, surgiram diversos modelos de desenvolvimento, conhecidos como ciclos de vida de software.
+
+Cada modelo possui características próprias e é mais adequado para determinados tipos de projetos.
+
+Alguns modelos priorizam planejamento rígido, enquanto outros valorizam a interação contínua com o cliente e a evolução gradual do sistema.
+
+Esses modelos permitem controlar custos, reduzir riscos e aumentar as chances de sucesso do projeto.`
+},
+
+"Modelo em Cascata e Modelo em Espiral": {
+"Resumo Rápido": `O modelo em cascata segue etapas rígidas e sequenciais. O modelo em espiral utiliza ciclos sucessivos, priorizando a análise de riscos e a interação contínua com o cliente.`,
+
+"Aula Completa": `O modelo em cascata foi um dos primeiros métodos utilizados no desenvolvimento de software.
+
+Nesse modelo, o projeto é dividido em etapas fixas que devem ser concluídas antes da próxima começar. Planejamento, análise, desenvolvimento e testes são realizados em sequência.
+
+Apesar de sua organização, o modelo apresenta dificuldades quando surgem mudanças nos requisitos, pois alterações tardias podem gerar retrabalho e aumento dos custos.
+
+Para superar essas limitações, surgiu o modelo em espiral.
+
+Nesse modelo, o desenvolvimento ocorre em ciclos. Cada volta da espiral envolve levantamento de requisitos, análise de riscos, implementação e avaliação pelo cliente.
+
+Essa abordagem permite identificar problemas mais cedo e adaptar o sistema às necessidades reais do projeto, tornando-o mais flexível e seguro.`
+},
+
+"Modelos Iterativo, Incremental e Evolucionário": {
+"Resumo Rápido": `Esses modelos permitem construir o software em etapas, realizando melhorias contínuas e entregando valor ao cliente ao longo do desenvolvimento.`,
+
+"Aula Completa": `Nos modelos iterativos, incrementais e evolucionários, o sistema é desenvolvido de maneira gradual.
+
+No modelo iterativo, uma versão inicial do sistema é criada e refinada sucessivamente através de novas versões.
+
+No modelo incremental, o software é dividido em módulos menores que são desenvolvidos e entregues separadamente.
+
+Já no modelo evolucionário, o sistema cresce continuamente através da interação com o cliente, recebendo melhorias e adaptações ao longo do tempo.
+
+Essas abordagens oferecem maior flexibilidade, permitem identificar erros mais cedo e facilitam a adaptação do projeto às mudanças nos requisitos.
+
+Por isso, os modelos iterativos e evolucionários serviram de base para muitas metodologias modernas de desenvolvimento de software.`
+},
+      "Fundamentos de grafos: História da teoria de grafos; Representação de problemas com grafos": {
         "Resumo Rápido": `A teoria dos grafos é a matemática das conexões. Ela nasceu de um enigma histórico sobre como atravessar todas as pontes de uma cidade sem repetir o caminho, e hoje é usada para representar desde redes sociais até mapas rodoviários.`,
         "Aula Completa": `Tudo começou no século dezoito, quando o matemático Euler tentou resolver o problema das sete pontes da cidade de Königsberg. Para simplificar, ele transformou as ilhas em pontos, que chamamos de vértices, e as pontes em linhas, que chamamos de arestas. Esse foi o nascimento dos grafos! Na computação, um grafo não é um gráfico de pizza ou de barras, mas sim um mapa mental de relações. Se você quer que o computador entenda quem é amigo de quem no Facebook, ou quais cidades estão conectadas por rodovias, você desenha um grafo.`
       },

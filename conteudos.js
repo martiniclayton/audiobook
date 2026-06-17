@@ -79,6 +79,29 @@ Existem diferentes formas de aprendizado. No aprendizado supervisionado, nós in
 
 Essa capacidade de aprender através de exemplos é utilizada em reconhecimento facial, filtros de spam, recomendação de filmes, tradução automática e muitas outras aplicações modernas da Inteligência Artificial.`
 },
+"Lógica proposicional e proposições": {
+  "Resumo Rápido": `Uma proposição é uma frase declarativa que pode ser classificada como verdadeira ou falsa. Perguntas, ordens e exclamações não são proposições.`,
+
+  "Aula Completa": `Na lógica proposicional, uma proposição é qualquer sentença declarativa que possui um valor lógico, isto é, pode ser classificada como verdadeira ou falsa.
+
+Exemplos de proposições:
+
+"Hoje está chovendo."
+"2 + 2 = 4."
+"O Brasil fica na América do Sul."
+
+Essas frases possuem valor lógico, independentemente de sabermos imediatamente se são verdadeiras ou falsas.
+
+Entretanto, perguntas, ordens e exclamações não são proposições, pois não podem receber um valor lógico.
+
+Exemplos:
+
+"Qual é o seu nome?" → pergunta → não é proposição.
+"Feche a porta." → frase imperativa → não é proposição.
+"Que lindo!" → exclamação → não é proposição.
+
+Assim, uma frase só pertence à lógica proposicional quando é uma afirmação capaz de ser classificada como verdadeira ou falsa.`
+},
 "Lógica de primeira ordem": {
   "Resumo Rápido": `A lógica de primeira ordem permite analisar as características e relações entre objetos. Diferentemente da lógica proposicional, que trata apenas afirmações verdadeiras ou falsas, os predicados investigam o significado dos elementos e os relacionamentos existentes entre eles.`,
 
@@ -258,6 +281,45 @@ ou
 aA*b
 
 As expressões regulares são equivalentes aos autômatos finitos e constituem a base da análise léxica dos compiladores.`
+},
+"Imagem, domínio, contradomínio e subconjunto": {
+  "Resumo Rápido": `Em uma função, o domínio representa os valores de entrada, enquanto o contradomínio representa todos os valores possíveis de saída. A imagem é formada apenas pelos valores que realmente são produzidos pela função, sendo sempre um subconjunto do contradomínio.`,
+
+  "Aula Completa": `Quando estudamos funções, precisamos separar claramente quatro conceitos importantes: domínio, contradomínio, imagem e subconjunto.
+
+O domínio corresponde ao conjunto de entrada da função. São todos os valores que podem ser utilizados como argumento. Por exemplo, em uma função que recebe números inteiros, o domínio pode ser o conjunto {1, 2, 3, 4}.
+
+O contradomínio representa todos os valores que a função pode assumir teoricamente como resultado. É como um conjunto de possibilidades disponíveis para a saída da função.
+
+Já a imagem é formada apenas pelos valores que realmente aparecem como resultado quando aplicamos todos os elementos do domínio na função. Por esse motivo, a imagem pode ser menor que o contradomínio.
+
+Por exemplo, considere uma função cujo domínio seja:
+
+A = {1, 2, 3}
+
+e cujo contradomínio seja:
+
+B = {2, 4, 6, 8}
+
+Se a função for definida por f(x)=2x, teremos:
+
+f(1)=2
+f(2)=4
+f(3)=6
+
+Portanto, a imagem será:
+
+Im(f) = {2, 4, 6}
+
+Observe que o número 8 pertence ao contradomínio, mas não faz parte da imagem, pois nenhum elemento do domínio produz esse valor.
+
+Por isso, dizemos que a imagem é sempre um subconjunto do contradomínio.
+
+Matematicamente:
+
+Imagem ⊆ Contradomínio
+
+Esses conceitos são fundamentais em funções, relações e na lógica matemática, pois permitem compreender claramente quais são os valores de entrada, quais são os valores possíveis de saída e quais são os valores efetivamente produzidos pela função.`
 },
 
     "Lógica de primeira ordem": {

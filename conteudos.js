@@ -70,6 +70,14 @@ const conteudos = {
     }
   },
   "Linguagens Formais e Autômatos": {
+    "Lógica de primeira ordem": {
+      "Resumo Rápido": `A lógica de primeira ordem é a base do raciocínio matemático. Ela nos permite expressar verdades universais usando quantificadores como "para todo" e "existe".`,
+      "Aula Completa": `A lógica de primeira ordem é a linguagem da matemática e da computação. Ela nos permite criar fórmulas que expressam verdades universais. Por exemplo, podemos dizer "Para todo número x, existe um número y tal que y é maior que x". Isso é uma afirmação poderosa que captura a essência do infinito. Na teoria da computação, usamos essa lógica para definir as regras que os autômatos seguem, garantindo que eles possam processar informações de maneira precisa e consistente.`
+    },
+    "Predicados": {
+      "Resumo Rápido": `Os predicados são como perguntas que fazemos sobre os objetos. Eles nos permitem classificar e organizar informações de forma lógica.`,
+      "Aula Completa": "O que eu entendi até agora pela introdução: A lógica de primeira ordem entra em uma camada mais específica dos dados. Enquanto o proposital lida com apenas com o elemento, sem considerar o que tem dentro e o que significa, o predicado, lida com o interior do elemento. No proposital o elemento somente é usado para verificar se a estrutura geral está correta, já o predicado verifica o que o elemento é de fato./ Enquanto o proposital converte os elementos em letras, o proposital analisa o que é o elemento, se é uma pessoa, o que ela faz, etc e faz ligações com o que ela realmente representa de fato."
+    },
     "Conceitos matemáticos para uso em linguagens formais": {
       "Resumo Rápido": `Antes de construir máquinas, precisamos da base matemática. Aqui revisamos conjuntos, relações e funções, que são as ferramentas usadas para descrever como os computadores processam informações.`,
       "Aula Completa": `Pense nos conceitos matemáticos como a caixa de ferramentas antes de construir uma casa. Na teoria da computação, não usamos martelos e pregos, mas sim conjuntos, que são grupos de elementos; relações, que mostram como esses elementos se conectam; e funções, que são como máquinas onde você insere um dado, ela processa, e devolve um resultado. Sem essa base lógica, seria impossível criar as regras que ensinam um computador a ler textos.`

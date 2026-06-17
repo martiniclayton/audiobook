@@ -70,6 +70,196 @@ const conteudos = {
     }
   },
   "Linguagens Formais e Autômatos": {
+    "Aprendizado de Máquina": {
+  "Resumo Rápido": `O aprendizado de máquina é uma área da Inteligência Artificial que permite ensinar computadores a reconhecer padrões e tomar decisões a partir de exemplos. Esse aprendizado pode ser supervisionado, quando mostramos as respostas corretas, ou não supervisionado, quando a própria máquina encontra padrões nos dados.`,
+
+  "Aula Completa": `No aprendizado de máquina, a ideia central é ensinar um computador a reconhecer padrões. Imagine que mostramos centenas de fotos de gatos e dizemos para a máquina: "isso é um gato". Ao comparar várias imagens, ela aprende características comuns, como formato das orelhas, olhos e corpo. Quando receber uma imagem nova, conseguirá identificar se existe um gato nela.
+
+Existem diferentes formas de aprendizado. No aprendizado supervisionado, nós informamos qual é a resposta correta. Já no aprendizado não supervisionado, a máquina tenta descobrir sozinha os padrões existentes nos dados, agrupando informações semelhantes.
+
+Essa capacidade de aprender através de exemplos é utilizada em reconhecimento facial, filtros de spam, recomendação de filmes, tradução automática e muitas outras aplicações modernas da Inteligência Artificial.`
+},
+"Lógica de primeira ordem": {
+  "Resumo Rápido": `A lógica de primeira ordem permite analisar as características e relações entre objetos. Diferentemente da lógica proposicional, que trata apenas afirmações verdadeiras ou falsas, os predicados investigam o significado dos elementos e os relacionamentos existentes entre eles.`,
+
+  "Aula Completa": `Enquanto a lógica proposicional trabalha apenas com proposições representadas por letras, sem se preocupar com o conteúdo interno, a lógica de primeira ordem é mais poderosa. Ela permite analisar propriedades dos objetos e as relações entre eles.
+
+Por exemplo, se João é pai de Pedro e Pedro é pai de Ana, podemos concluir que Ana é neta de João. Essa capacidade de inferir novos conhecimentos através de relações é uma das maiores forças dos predicados.
+
+Os predicados permitem responder perguntas como:
+
+- Quem é pai de quem?
+- Quem é capital de determinado estado?
+- Quais objetos possuem determinada característica?
+
+Na computação, a lógica de primeira ordem é utilizada em bancos de dados, sistemas especialistas e inteligência artificial, permitindo representar conhecimentos e deduzir novas informações de maneira formal.`
+},
+"Alfabetos": {
+  "Resumo Rápido": `Um alfabeto é um conjunto finito e não vazio de símbolos utilizados para formar palavras ou cadeias. A partir desses símbolos, podemos construir linguagens formais.`,
+
+  "Aula Completa": `Um alfabeto é representado por Σ (Sigma) e consiste em um conjunto finito e não vazio de símbolos.
+
+Exemplo:
+
+Σ = {a, b, c}
+
+A partir desse alfabeto podemos criar palavras como:
+
+abc
+cab
+bbca
+
+Mas uma palavra como:
+
+abcd
+
+seria inválida, pois o símbolo d não pertence ao alfabeto.
+
+O Fecho de Kleene (Σ*) representa todas as palavras possíveis formadas pelos símbolos do alfabeto, incluindo a cadeia vazia ε.
+
+Já Σ⁺ representa todas as palavras possíveis, exceto a cadeia vazia.
+
+A cardinalidade |Σ| representa a quantidade de símbolos do alfabeto.
+
+Exemplo:
+
+Σ = {a,b,c,d}
+
+|Σ| = 4
+
+É importante lembrar que Σ⁰ = {ε}. Esse conjunto possui um elemento, a cadeia vazia, e portanto não é o conjunto vazio Ø.
+
+Como o Fecho de Kleene permite formar palavras de tamanho ilimitado, Σ* é infinito sempre que o alfabeto possuir pelo menos um símbolo.`
+},
+"Gramática": {
+  "Resumo Rápido": `A gramática define as regras que uma linguagem deve seguir. Ela é responsável por verificar se uma sentença foi construída corretamente.`,
+
+  "Aula Completa": `A gramática funciona como um conjunto invisível de regras que controla a construção das sentenças de uma linguagem.
+
+Formalmente, uma gramática é representada por:
+
+G(V,T,S,P)
+
+onde:
+
+V → variáveis ou não-terminais;
+T → símbolos terminais;
+S → símbolo inicial;
+P → regras de produção.
+
+Por exemplo:
+
+int valor = 10;
+
+A palavra reservada "int" pertence ao conjunto de terminais da linguagem.
+
+As regras de produção determinam como os símbolos podem ser combinados para gerar sentenças válidas.
+
+Se uma instrução não obedecer às regras da gramática, o compilador emitirá um erro de sintaxe.
+
+A gramática é responsável por garantir a estrutura correta do código e é a base da análise sintática realizada pelos compiladores.`
+},
+"Hierarquia de Chomsky": {
+  "Resumo Rápido": `A Hierarquia de Chomsky classifica as linguagens em quatro níveis, indo das mais simples às mais poderosas computacionalmente.`,
+
+  "Aula Completa": `Noam Chomsky organizou as linguagens formais em quatro níveis:
+
+Tipo 3 — Linguagens Regulares
+- Gramáticas regulares;
+- Expressões regulares;
+- Autômatos finitos;
+- Análise léxica.
+
+Tipo 2 — Linguagens Livres de Contexto
+- Gramáticas livres de contexto;
+- Autômatos com pilha;
+- Análise sintática;
+- Verificação de parênteses e blocos.
+
+Tipo 1 — Gramáticas Sensíveis ao Contexto
+- Dependem dos símbolos vizinhos;
+- Análise semântica;
+- Autômatos linearmente limitados.
+
+Tipo 0 — Gramáticas Irrestritas
+- Maior poder computacional;
+- Máquina de Turing;
+- Computação geral.
+
+Quanto menor o número do tipo, maior o poder computacional da linguagem.`
+},
+"Autômatos Finitos": {
+  "Resumo Rápido": `Um autômato finito é uma máquina de estados que lê símbolos um a um e muda de estado de acordo com regras previamente definidas.`,
+
+  "Aula Completa": `Os autômatos finitos são máquinas matemáticas que processam uma cadeia símbolo por símbolo.
+
+Cada símbolo lido pode provocar uma mudança de estado.
+
+Um exemplo clássico consiste em verificar se a quantidade de símbolos 1 em uma sequência é par ou ímpar.
+
+O autômato possui dois estados:
+
+Epar
+Eimpar
+
+Sempre que lê um símbolo 1, alterna entre os estados.
+
+Ao ler um símbolo 0, permanece no mesmo estado.
+
+Assim, após processar toda a cadeia, o estado final indica se a quantidade de uns é par ou ímpar.
+
+Os autômatos finitos são a base dos analisadores léxicos dos compiladores e são equivalentes às expressões regulares.`
+},
+"Expressões Regulares": {
+  "Resumo Rápido": `As expressões regulares são uma forma matemática de descrever linguagens regulares através das operações de união, concatenação e fecho de Kleene.`,
+
+  "Aula Completa": `As expressões regulares funcionam como moldes para definir quais palavras pertencem a uma linguagem.
+
+As três operações fundamentais são:
+
+União (+ ou |)
+Concatenação
+Fecho de Kleene (*)
+
+O Fecho de Kleene permite repetir uma expressão infinitamente, inclusive zero vezes.
+
+Um erro comum em provas é utilizar:
+
+|A|
+
+para representar qualquer símbolo do alfabeto.
+
+Na verdade, |A| representa a cardinalidade do conjunto.
+
+Se:
+
+A = {a,b,c,d,e}
+
+então:
+
+|A| = 5
+
+Para representar qualquer símbolo do alfabeto devemos utilizar:
+
+A*
+
+ou
+
+Σ*
+
+Exemplo:
+
+Linguagem formada por palavras que começam com a e terminam com b:
+
+aΣ*b
+
+ou
+
+aA*b
+
+As expressões regulares são equivalentes aos autômatos finitos e constituem a base da análise léxica dos compiladores.`
+},
+
     "Lógica de primeira ordem": {
       "Resumo Rápido": `A lógica de primeira ordem é a base do raciocínio matemático. Ela nos permite expressar verdades universais usando quantificadores como "para todo" e "existe".`,
       "Aula Completa": `A lógica de primeira ordem é a linguagem da matemática e da computação. Ela nos permite criar fórmulas que expressam verdades universais. Por exemplo, podemos dizer "Para todo número x, existe um número y tal que y é maior que x". Isso é uma afirmação poderosa que captura a essência do infinito. Na teoria da computação, usamos essa lógica para definir as regras que os autômatos seguem, garantindo que eles possam processar informações de maneira precisa e consistente.`
